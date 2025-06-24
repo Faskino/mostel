@@ -1,0 +1,11 @@
+---
+
+const { height } = Astro.props;
+
+---
+
+<section class={`${height} relative flex flex-col justify-center items-center`}>
+  <div class="relative z-10 w-full text-white h-full">
+    <slot />
+  </div>
+</section>

@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+interface Props {
+	imagePath:string,
+    title:string,
+    content:string 
+}
+const { imagePath, title, content } = Astro.props;
+
+const images = import.meta.glob<{default:ImageMetadata}>('/src/assets/images/*.webp')
+console.log(images[imagePath])
+---
+<div class="h-100 w-full" style={`background-image: url(${images[imagePath]()});`}>
+    <p class="text-2xl">{title}</p>
+    <p class="text-2xl">{content}</p>
+</div>

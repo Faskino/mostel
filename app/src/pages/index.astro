@@ -1,0 +1,61 @@
+---
+import "../styles/global.css";
+import Section from "../components/Section.astro";
+import Layout from "../layouts/Layout.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Hero from "../components/Hero.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout>
+	<Hero  imagePath="/src/assets/images/mostel (1).webp" >
+		<div class="flex flex-col h-full w-full items-center justify-center text-center">
+			<SectionTitle text="Mostel A&A" ></SectionTitle>
+			<SectionTitle text="Kalibrujeme a opravujeme meradlá" type="subtitle"></SectionTitle>
+		</div>
+	</Hero>
+	<Section height="h-screen">
+		<div class="flex flex-col h-full w-full items-center justify-center text-center">
+			<SectionTitle text="Kalibrujeme meradlá pre rôzne veličiny" ></SectionTitle>
+			<SectionTitle text="Od tlaku až po elektrický odpor" type="subtitle"></SectionTitle>
+			<div class="flex gap-3 h-100 relative w-full">
+				<button class="absolute h-5 w-5 bg-red-200 right-full mr-5 top-1/2 cursor-pointer flex items-center justify-center p-7 rounded-full" >Dolava</button>
+				<button class="absolute h-5 w-5 bg-red-200 left-full ml-5 top-1/2 cursor-pointer flex items-center justify-center p-7 rounded-full" >Doprava</button>
+				<div class="bg-white h-full w-70"></div>
+				<div class="bg-white h-full w-70"></div>
+				<div class="bg-white h-full w-70"></div>
+				<div class="bg-white h-full w-70"></div>
+			</div>
+			<Button href="/services" text="Prehľad"></Button>
+		</div>
+	</Section>
+	<Section height="h-screen">
+		<div class="grid grid-cols-2 w-full items-center justify-center gap-3">
+			<div class="bg-white w-full h-full"></div>
+			<div class="flex flex-col w-full h-full justify-center">
+				<SectionTitle text="Ako to robíme u nás?" type="title" class="mb-5"></SectionTitle>
+				<SectionTitle text="Precízne a jednoducho" type="subtitle"></SectionTitle>
+				<p class="text-white">
+					Ex nisi occaecat nulla fugiat est nisi amet eiusmod
+					voluptate. Exercitation ullamco veniam sint commodo nisi
+					adipisicing pariatur do non exercitation fugiat velit
+					deserunt exercitation. Sint voluptate aliqua consequat
+					deserunt proident consectetur. Veniam veniam velit aliquip
+					cupidatat. Ad eiusmod exercitation in ex elit sint cupidatat
+					ea laboris sint quis sit.
+				</p>
+				<a href="/" class="text-white underline">Podrobnosti</a>
+			</div>
+		</div>
+	</Section>
+	<Section height="h-100">
+		<div class="flex flex-col justify-center items-center">
+			<SectionTitle text="Naši obchodní partneri" type="subtitle"></SectionTitle>
+			<div class="flex gap-3">
+				<div class="bg-white h-50 w-100"></div>
+				<div class="bg-white h-50 w-100"></div>
+				<div class="bg-white h-50 w-100"></div>
+			</div>
+		</div>
+	</Section>
+</Layout>

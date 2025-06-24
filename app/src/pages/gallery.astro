@@ -1,0 +1,22 @@
+---
+import Masonry from "../components/Masonry.astro";
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+import { Image } from "astro:assets";
+const assets = import.meta.glob("/src/assets/images/*.{jpg,JPG,jpeg,png,PNG,webp}", {
+    eager:true,
+});
+const images = Object.values(assets).map((mod:any) => mod.default);
+console.log('images', images)
+---
+<Layout>
+    <Section height="auto">
+    <Masonry>
+    {images.map((image) => (
+      <Image src={image} alt="Gallery image" class="mb-5"></Image>
+    ))}
+    </Masonry>
+    </Section>
+</Layout>
+
+

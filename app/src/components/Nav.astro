@@ -1,13 +1,32 @@
 ---
-
+const items = [
+    {name:"Domov", href:"/"},
+    {name:"Služby", href:"/services"},
+    {name:"O nás", href:"/about"},
+    {name:"Kontakt", href:"/contact"},
+    {name:"Galéria", href:"/gallery"},
+];
 ---
 
-<nav class="fixed text-white top-0 left-0 w-screen h-15 flex items-center justify-center z-1000">
+<nav id="navbar" class="fixed text-white top-0 left-0 w-screen h-15 flex items-center justify-center z-1000 transition-colors duration-150">
     <div class="flex gap-5">
-        <a href="/">Domov</a>
-        <a href="/services">Služby</a>
-        <a href="/about">O nás</a>
-        <a href="/contact">Kontakt</a>
-        <a href="/gallery">Galéria</a>
+        {items.map(item=>(
+            <a href={item.href} class="hover:text-secondary">{item.name}</a>
+        ))}
+        
     </div>
 </nav>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 100  ) {
+            navbar?.classList.add('bg-background', 'shadow-md');
+            navbar?.classList.remove('bg-transparent');
+          } else {
+            navbar?.classList.remove('bg-background', 'shadow-md');
+            navbar?.classList.add('bg-transparent');
+          }
+        });
+      });
+</script>

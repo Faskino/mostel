@@ -1,0 +1,35 @@
+---
+ const images = [
+    {src:'certificates/certificate1.jpg', title:"Hmotnosť"},
+    {src:'certificates/certificate2.jpg', title:"Tlak"},
+    {src:'certificates/certificate3.jpg', title:"Teplota"},
+    {src:'certificates/certificate4.jpg', title:"Dĺžka"},
+    {src:'certificates/certificate5.jpg', title:"Elektro"}
+ ]
+---
+<div class="flex gap-5 w-full h-full">
+{images.map(image =>(
+<div id="certificate" style={{backgroundImage: `url('${image.src}')`}} class="bg-cover h-50 w-100 cursor-pointer flex group" onclick={`showFullscreen('${image.src}')`}>
+    <p class="self-end bg-secondary w-full text-center p-4 transition-all duration-150 group-hover:p-6">{image.title}</p>
+</div>
+))}
+</div>
+<div id="fullscreen" onclick="closeFullscreen()" class="fixed left-0 right-0 top-0 z-1000 w-screen h-screen hidden rounded-sm p-20 cursor-pointer bg-black/50">
+    <img id="fullscreen-img" src="" alt="Fullscreen view" class="relative max-w-full max-h-full object-contain m-auto"/>
+</div>
+
+
+<script is:inline>
+function showFullscreen(src) {
+  const overlay = document.getElementById('fullscreen');
+  const img = document.getElementById('fullscreen-img');
+  img.src = src;
+  overlay.classList.add("flex");
+  overlay.classList.remove("hidden");
+}
+
+function closeFullscreen() {
+    document.getElementById('fullscreen').classList.remove("flex");
+    document.getElementById('fullscreen').classList.add("hidden");
+}
+</script>

@@ -4,21 +4,23 @@ import SectionTitle from "../components/SectionTitle.astro";
 import Layout from "../layouts/Layout.astro";
 import Gallery from "../components/Gallery.astro"
 import Button from "../components/Button.astro";
+import Hero from "../components/Hero.astro";
+import Certificate from "../components/Certificate.astro";
 ---
 
-<Layout>
-    <Section height="h-screen">
+<Layout backgroundUrl="images/image2.png">
+    <Hero imagePath="/src/assets/images/mostel (125).webp">
 		<div class="flex flex-col h-full w-full items-center justify-center text-center">
 			<SectionTitle text="Sme experti na kalibráciu" ></SectionTitle>
 			<SectionTitle text="Ponúkame presné merania bez starostí" type="subtitle"></SectionTitle>
 		</div>
-	</Section>
+    </Hero>
     <Section height="h-screen">
 		<div class="flex flex-col h-full w-full items-center justify-center text-center">
-			<SectionTitle text="Kalibrujeme meradlá pre rôzne veličiny" ></SectionTitle>
-			<SectionTitle text="Od tlaku až po elektrický odpor" type="subtitle"></SectionTitle>
-			<div class="flex h-100 w-full">
-				<div class="bg-white w-full h-full"></div>
+			<SectionTitle text="Kalibrujeme meradlá pre rôzne veličiny" class="mb-3"></SectionTitle>
+			<SectionTitle text="Od tlaku až po elektrický odpor" type="subtitle" class="mb-10"></SectionTitle>
+			<div class="flex h-100 w-full mb-5">
+				<div style="background-image: url('/images/mostel (120).webp');" class="bg-contain bg-no-repeat bg-center w-full h-full"></div>
 			</div>
             <p class="text-white text-center">
 					Ex nisi occaecat nulla fugiat est nisi amet eiusmod
@@ -33,20 +35,16 @@ import Button from "../components/Button.astro";
 	</Section>
     <Section height="h-fit">
         <div class="flex flex-col w-full text-center items-center">
-            <SectionTitle text="Ako to u nás vyzerá"></SectionTitle>
+            <SectionTitle text="Ako to u nás vyzerá" class="mb-5"></SectionTitle>
             <Gallery></Gallery>
             <Button text="Galéria" href="gallery"></Button>
         </div >
     </Section>
     <Section height="h-120">
+        <div class="flex flex-col w-full text-center items-center justify-center">
             <SectionTitle text="Certifikáty"></SectionTitle>
             <SectionTitle text="Naše certifikáty sú dôkazom našej kvality a presnosti" type="subtitle"></SectionTitle>
-            <div class="grid grid-cols-5 grid-rows-1 gap-5 w-full">
-                <div class="aspect-square bg-red-950 w-full flex flex-col items-center justify-end"><p class="text-white">Teplota</p> </div>
-                <div class="aspect-square bg-red-950 w-full flex flex-col items-center justify-end"><p class="text-white">Teplota</p> </div>
-                <div class="aspect-square bg-red-950 w-full flex flex-col items-center justify-end"><p class="text-white">Teplota</p> </div>
-                <div class="aspect-square bg-red-950 w-full flex flex-col items-center justify-end"><p class="text-white">Teplota</p> </div>
-                <div class="aspect-square bg-red-950 w-full flex flex-col items-center justify-end"><p class="text-white">Teplota</p> </div>
-            </div>
+            <Certificate/>
+        </div>
     </Section>
 </Layout>

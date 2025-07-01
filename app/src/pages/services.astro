@@ -84,12 +84,12 @@ const items = [
                 <div class="grid grid-cols-2 grid-rows-2 gap-2 h-full w-full" id="contentButtons">
                     {items.map((item, index) => (
                     <div style=`background-image: url("${item.link}")` class="rounded-sm clickable cursor-pointer h-full w-full bg-cover flex group" data-index={index} data-content={item.content}>
-                        <p class="self-end bg-secondary w-full text-center p-4 transition-all duration-150 group-hover:p-6">{item.text}</p>
+                        <p class="self-end bg-primary w-full text-center p-4 transition-all duration-150 group-hover:p-6">{item.text}</p>
                     </div>
                     ))}
                 </div>
 
-                <div id="displayArea" class="p-6 border-2 border-secondary rounded-sm flex flex-col text-left h-full">Detaily sa zobrazia po kliknutí.</div>
+                <div id="displayArea" class="p-6  bg-primary rounded-sm flex flex-col text-left h-full">Detaily sa zobrazia po kliknutí.</div>
             </div>
         </div>
     </Section>

@@ -14,8 +14,16 @@ const {backgroundUrl} = Astro.props
 		<title>Mostel</title>
 	</head>
 	<body class="px-64 bg-background font-raleway relative" >
-		<div class="absolute w-full h-full left-0 right-0 bg-cover" style=`background-image: url(${backgroundUrl});`></div>
+		<div class="bg absolute w-full h-full left-0 right-0 bg-cover"></div>
 		<Nav></Nav>
 		<slot />
 	</body>
 </html>
+<style define:vars={{image: `url(${backgroundUrl})`, image2:`url(sm-${backgroundUrl})`}}>
+	.bg{
+		background-image: var(--image);
+		@media (max-width: 600px){
+			background-image: var(--image2);
+		}
+	}
+</style>

@@ -1,22 +1,111 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import SectionTitle from "../components/SectionTitle.astro"
-import Hero from "../components/Hero.astro"
 import Section from "../components/Section.astro"
-import Card from "../components/Card.astro"
 
+const items = [
+  { link:"/images/mostel (56).webp", text:"Dĺžka, uhol a tvrdosť",  content: `
+  <ul class="list-disc">
+  <li><span>kalibrácia posuvných meradiel všetkých druhov</span></li>
+  <li><span>kalibrácia dvojdotykových a trojdotykových dutinomerov</span></li>
+  <li><span>kalibrácia mikrometrov všetkých druhov</span></li>
+  <li><span>kalibrácia mikrometrických odpichov pevných a skladacích</span></li>
+  <li><span>kalibrácia valčekových a strmeňových kalibrov, kontrolných krúžkov a kontrolných mierok k strmeňovým mikrometrom</span></li>
+  <li><span>kalibrácia závitových kalibrov pre vonkajší a vnútorný závit</span></li>
+  <li><span>kalibrácia passametrov a mikropassametrov</span></li>
+  <li><span>kalibrácia meracích drôtikov na kontrolu závitov</span></li>
+  <li><span>kalibrácia kontrolných valčekov a lístkových škáromerov</span></li>
+  <li><span>kalibrácia pevných oceľových čiarkových meradiel, oceľových stáčacích metrov a pásiem</span></li>
+  <li><span>kalibrácia číselníkových odchýlkomerov všetkých druhov</span></li>
+  <li><span>kalibrácia závitových a polomerových šablón</span></li>
+  <li><span>kalibrácia koncových mierok</span></li>
+  <li><span>kalibrácia mechanických a optických uhlomerov</span></li>
+  <li><span>kalibrácia uholníkov</span></li>
+  <li><span>kalibrácia uhlomerov</span></li>
+  <li><span>kalibrácia vodováh</span></li>
+  <li><span>kalibrácia nožových pravítiek</span></li>
+  <li><span>kalibrácia tvrdomero</span></li>
+</ul>
+
+` },
+  {link:"/images/mostel (84).webp", text:"Moment sily, váha a tlak",  content: `<ul class="list-disc">
+  <li><span>kalibrácia momentových kľúčov</span></li>
+  <li><span>kalibrácia momentových skrutkovačov</span></li>
+  <li><span>kalibrácia elektrických momentových kľúčov</span></li>
+  <li><span>kalibrácia testerov momentových kľúčov</span></li>
+  <li><span>kalibrácia dynamometrov</span></li>
+  <li><span>kalibrácia silomerov</span></li>
+  <li><span>kalibrácia váh</span></li>
+  <li><span>kalibrácia tlakomerov</span></li>
+</ul>` },
+  { link:"/images/mostel (111).webp", text:"Teplota, vlhkosť",  content: `<ul class="list-disc"><li><span>kalibrácia teplomerov obalových</span></li>
+  <li><span>kalibrácia teplomerov bimetalických</span></li>
+  <li><span>kalibrácia teplomerov vpichových</span></li>
+  <li><span>kalibrácia teplomerov chladničkových</span></li>
+  <li><span>kalibrácia teplomerov mrazničkových</span></li>
+  <li><span>kalibrácia teplomerov hrotu spájkovačky</span></li>
+  <li><span>kalibrácia spájkovačiek</span></li>
+  <li><span>kalibrácia nastenných teplomerov</span></li>
+  <li><span>kalibrácia predohrevov</span></li>
+  <li><span>kalibrácia sušiacich pecí</span></li>
+  <li><span>kalibrácia teplotných čidiel</span></li>
+  <li><span>kalibrácia datalogerov teploty</span></li>
+  <li><span>kalibrácia datalogerov vlhkosti</span></li>
+  <li><span>kalibrácia vlhkomerov</span></li>
+  <li><span>kalibrácia meradiel vlhkosti materiálov</span></li>
+</ul>` },
+  { link:"/images/mostel (75).webp", text:"Elektro", content: `<ul class="list-disc">
+  <li><span>kalibrácia multimetrov</span></li>
+  <li><span>kalibrácia rúčkových meradiel</span></li>
+  <li><span>kalibrácia ohmetrov</span></li>
+  <li><span>kalibrácia meradiel kapacity</span></li>
+  <li><span>kalibrácia meradiel indukčnosti</span></li>
+  <li><span>kalibrácia RLC mostov</span></li>
+  <li><span>kalibrácia osciloskopov</span></li>
+  <li><span>kalibrácia generátorov</span></li>
+  <li><span>kalibrácia čítačov</span></li>
+  <li><span>kalibrácia revíznych prístrojov</span></li>
+  <li><span>kalibrácia AC a DC zdrojov</span></li>
+  <li><span>kalibrácia odporových dekád</span></li>
+  <li><span>kalibrácia kapacitných dekád</span></li>
+  <li><span>kalibrácia bočníkov</span></li>
+  <li><span>kalibrácia záťaží</span></li>
+  <li><span>kalibrácia testerov batérií</span></li>
+</ul>
+` },
+];
 ---
 
-<Layout>
+<Layout backgroundUrl="images/image.png">
     <Section height="h-screen">
-		<div class="flex flex-col h-full w-full items-center justify-center text-center">
-			<SectionTitle text="Kalibrácia" ></SectionTitle>
-            <div class="flex w-full gap-5">
-                <div class="h-100 w-full bg-white"></div>
-                <div class="h-100 w-full bg-white"></div>
-                <div class="h-100 w-full bg-white"></div>
-                <!-- <Card imagePath="/src/assets/images/mostel (129).webp"></Card> -->
+        <div class="flex flex-col w-full h-full text-center items-center justify-center py-20 gap-5">
+            <SectionTitle text="Kalibrujeme"></SectionTitle>
+            <div class="grid grid-cols-2 gap-4 h-full w-full ">
+                <div class="grid grid-cols-2 grid-rows-2 gap-2 h-full w-full" id="contentButtons">
+                    {items.map((item, index) => (
+                    <div style=`background-image: url("${item.link}")` class="rounded-sm clickable cursor-pointer h-full w-full bg-cover flex group" data-index={index} data-content={item.content}>
+                        <p class="self-end bg-secondary w-full text-center p-4 transition-all duration-150 group-hover:p-6">{item.text}</p>
+                    </div>
+                    ))}
+                </div>
+
+                <div id="displayArea" class="p-6 border-2 border-secondary rounded-sm flex flex-col text-left h-full">Detaily sa zobrazia po kliknutí.</div>
             </div>
-		</div>
-	</Section>
+        </div>
+    </Section>
 </Layout>
+
+
+
+<script is:inline>
+  const buttons = document.querySelectorAll('#contentButtons .clickable');
+  const displayArea = document.getElementById('displayArea');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const text = btn.dataset.content;
+      displayArea.innerHTML = text;
+      
+    });
+  });
+</script>

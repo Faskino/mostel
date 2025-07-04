@@ -1,0 +1,157 @@
+---
+import "../styles/global.css"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Switcher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">Content Switcher</h1>
+        
+        <div class="bg-white rounded-lg shadow-lg p-6 h-[90vh] flex flex-col">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 flex-1">
+                <!-- Left side - Button grid -->
+                <div class="space-y-4">
+                    <h2 class="text-xl font-semibold text-gray-700 mb-4">Categories</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button 
+                            class="content-btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                            data-content="fruits">
+                            Fruits
+                        </button>
+                        <button 
+                            class="content-btn bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                            data-content="vegetables">
+                            Vegetables
+                        </button>
+                        <button 
+                            class="content-btn bg-purple-500 hover:bg-purple-600 active:bg-purple-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                            data-content="animals">
+                            Animals
+                        </button>
+                        <button 
+                            class="content-btn bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                            data-content="colors">
+                            Colors
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Right side - Content display -->
+                <div class="space-y-4 flex flex-col">
+                    <h2 class="text-xl font-semibold text-gray-700 mb-4">Content</h2>
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 overflow-y-auto flex-1">
+                        <div id="content-display">
+                            <p class="text-gray-500 text-center py-8">Select a category to view content</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Content data
+        const contentData = {
+            fruits: [
+                'Apple', 'Banana', 'Orange', 'Grape', 'Strawberry', 'Pineapple', 'Mango', 'Kiwi',
+                'Watermelon', 'Peach', 'Pear', 'Cherry', 'Blueberry', 'Raspberry', 'Blackberry',
+                'Coconut', 'Avocado', 'Papaya', 'Lemon', 'Lime', 'Grapefruit', 'Pomegranate',
+                'Fig', 'Date', 'Apricot', 'Plum', 'Cantaloupe', 'Honeydew', 'Passion Fruit'
+            ],
+            vegetables: [
+                'Carrot', 'Broccoli', 'Spinach', 'Tomato', 'Cucumber', 'Bell Pepper', 'Onion', 'Garlic',
+                'Potato', 'Sweet Potato', 'Lettuce', 'Cabbage', 'Cauliflower', 'Zucchini', 'Eggplant',
+                'Asparagus', 'Green Beans', 'Peas', 'Corn', 'Mushroom', 'Celery', 'Radish',
+                'Kale', 'Brussels Sprouts', 'Artichoke', 'Beetroot', 'Turnip', 'Leek', 'Parsnip'
+            ],
+            animals: [
+                'Lion', 'Tiger', 'Elephant', 'Giraffe', 'Zebra', 'Monkey', 'Kangaroo', 'Panda',
+                'Bear', 'Wolf', 'Fox', 'Rabbit', 'Deer', 'Horse', 'Cow', 'Pig',
+                'Sheep', 'Goat', 'Dog', 'Cat', 'Bird', 'Fish', 'Dolphin', 'Whale',
+                'Shark', 'Turtle', 'Frog', 'Snake', 'Lizard', 'Butterfly', 'Bee', 'Ant'
+            ],
+            colors: [
+                'Red', 'Blue', 'Green', 'Yellow', 'Orange', 'Purple', 'Pink', 'Brown',
+                'Black', 'White', 'Gray', 'Cyan', 'Magenta', 'Turquoise', 'Indigo', 'Violet',
+                'Crimson', 'Scarlet', 'Navy', 'Teal', 'Lime', 'Olive', 'Maroon', 'Silver',
+                'Gold', 'Beige', 'Tan', 'Coral', 'Salmon', 'Lavender', 'Mint', 'Peach'
+            ]
+        };
+
+        // Get DOM elements
+        const buttons = document.querySelectorAll('.content-btn');
+        const contentDisplay = document.getElementById('content-display');
+
+        // Function to update content display
+        function updateContent(category) {
+            const items = contentData[category];
+            if (items) {
+                const listHTML = `
+                    <ul class="space-y-2">
+                        ${items.map(item => `
+                            <li class="bg-white p-3 rounded-lg shadow-sm border border-gray-200 hover:bg-gray-50 transition-colors duration-150">
+                                ${item}
+                            </li>
+                        `).join('')}
+                    </ul>
+                `;
+                contentDisplay.innerHTML = listHTML;
+            }
+        }
+
+        // Function to update button states
+        function updateButtonStates(activeButton) {
+            buttons.forEach(btn => {
+                btn.classList.remove('ring-2', 'ring-offset-2');
+                if (btn.dataset.content === 'fruits') {
+                    btn.classList.remove('bg-blue-700');
+                    btn.classList.add('bg-blue-500');
+                } else if (btn.dataset.content === 'vegetables') {
+                    btn.classList.remove('bg-green-700');
+                    btn.classList.add('bg-green-500');
+                } else if (btn.dataset.content === 'animals') {
+                    btn.classList.remove('bg-purple-700');
+                    btn.classList.add('bg-purple-500');
+                } else if (btn.dataset.content === 'colors') {
+                    btn.classList.remove('bg-orange-700');
+                    btn.classList.add('bg-orange-500');
+                }
+            });
+
+            // Add active state to clicked button
+            if (activeButton.dataset.content === 'fruits') {
+                activeButton.classList.remove('bg-blue-500');
+                activeButton.classList.add('bg-blue-700', 'ring-2', 'ring-blue-500', 'ring-offset-2');
+            } else if (activeButton.dataset.content === 'vegetables') {
+                activeButton.classList.remove('bg-green-500');
+                activeButton.classList.add('bg-green-700', 'ring-2', 'ring-green-500', 'ring-offset-2');
+            } else if (activeButton.dataset.content === 'animals') {
+                activeButton.classList.remove('bg-purple-500');
+                activeButton.classList.add('bg-purple-700', 'ring-2', 'ring-purple-500', 'ring-offset-2');
+            } else if (activeButton.dataset.content === 'colors') {
+                activeButton.classList.remove('bg-orange-500');
+                activeButton.classList.add('bg-orange-700', 'ring-2', 'ring-orange-500', 'ring-offset-2');
+            }
+        }
+
+        // Add event listeners to buttons
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const category = this.dataset.content;
+                updateContent(category);
+                updateButtonStates(this);
+            });
+        });
+
+        // Initialize with first category
+        updateContent('fruits');
+        updateButtonStates(buttons[0]);
+    </script>
+</body>
+</html>

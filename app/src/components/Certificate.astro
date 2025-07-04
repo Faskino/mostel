@@ -7,9 +7,9 @@
     {src:'certificates/certificate5.jpg', title:"Elektro"}
  ]
 ---
-<div class="flex gap-5 w-full h-full">
+<div class="grid grid-cols-2 md:grid-cols-5 gap-5 w-full h-full">
 {images.map(image =>(
-<div id="certificate" style={{backgroundImage: `url('${image.src}')`}} class="bg-cover h-50 w-100 cursor-pointer flex group" onclick={`showFullscreen('${image.src}')`}>
+<div id="certificate" style={{backgroundImage: `url('${image.src}')`}} class="bg-cover h-50 w-full cursor-pointer flex group last:col-span-2" onclick={`showFullscreen('${image.src}')`}>
     <p class="self-end bg-secondary w-full text-center p-4 transition-all duration-150 group-hover:p-6">{image.title}</p>
 </div>
 ))}

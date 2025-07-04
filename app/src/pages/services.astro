@@ -77,19 +77,19 @@ const items = [
 ---
 
 <Layout backgroundUrl="images/image.png">
-    <Section height="h-screen">
+    <Section height="h-[9\0vh]">
         <div class="flex flex-col w-full h-full text-center items-center justify-center py-20 gap-5">
             <SectionTitle text="Kalibrujeme"></SectionTitle>
-            <div class="grid grid-cols-2 gap-4 h-full w-full ">
-                <div class="grid grid-cols-2 grid-rows-2 gap-2 h-full w-full" id="contentButtons">
+            <div class="grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2 gap-4 h-full w-full ">
+                <div class="grid row-start-2 md:row-start-1 grid-cols-4 md:grid-cols-2 md:grid-rows-2 gap-2 h-full w-full" id="contentButtons">
                     {items.map((item, index) => (
                     <div style=`background-image: url("${item.link}")` class="rounded-sm clickable cursor-pointer h-full w-full bg-cover flex group" data-index={index} data-content={item.content}>
-                        <p class="self-end bg-primary w-full text-center p-4 transition-all duration-150 group-hover:p-6">{item.text}</p>
+                        <p class="text-sm md:text-base self-end bg-primary h-full md:h-auto w-full text-center p-4 transition-all duration-150 group-hover:p-6">{item.text}</p>
                     </div>
                     ))}
                 </div>
 
-                <div id="displayArea" class="p-6  bg-primary rounded-sm flex flex-col text-left h-full">Detaily sa zobrazia po kliknutí.</div>
+                <div id="displayArea" class="overflow-y-scroll  text-sm md:text-base p-6  bg-primary rounded-sm flex flex-col text-left h-full">Detaily sa zobrazia po kliknutí.</div>
             </div>
         </div>
     </Section>

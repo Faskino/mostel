@@ -4,7 +4,7 @@ const { class: className} = Astro.props;
 ---
 
 {type === 'title' ? (
-  <h1 class=` text-6xl font-bold font-nunito  ${className}`>{text}</h1>
+  <h1 class=` text-4xl md:text-6xl font-bold font-nunito  ${className}`>{text}</h1>
 ) : (
-  <h2 class=` text-3xl text-white  ${className}`>{text}</h2>
+  <h2 class=` text-xl md:text-3xl text-white  ${className}`>{text}</h2>
 )}

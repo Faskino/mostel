@@ -23,13 +23,14 @@ const services=[
 		</div>
 	</Hero>
 	<Section height="h-fit">
-		<div class="flex flex-col h-full w-full items-center justify-center text-center pt-50 pb-20">
+		<div class="flex flex-col h-full w-full items-center justify-center text-center pt-20 pb-20 md:pt-50 md:pb-50">
 			<SectionTitle text="Kalibrujeme meradlá pre rôzne veličiny" class="mb-3" ></SectionTitle>
 			<SectionTitle text="Od tlaku až po elektrický odpor" type="subtitle" class="mb-10"></SectionTitle>
-			<div class="flex gap-5 h-100 relative w-full mb-20">
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-5 justify-center h-100 relative w-full mb-10 md:mb-20">
 				{services.map(item=>(
-					<div style=`background-image: url("${item.link}")` class="relative h-full w-70 bg-center bg-cover rounded-sm">
-						<p class="absolute m-auto left-0 right-0 top-[calc(100%+14px)]">{item.text}</p>
+					<div class="flex flex-col">
+						<div style=`background-image: url("${item.link}")` class=" h-full w-full bg-center bg-cover rounded-sm"></div>
+						<p class="text-sm md:text-base">{item.text}</p>
 					</div>
 					
 				))}
@@ -38,7 +39,7 @@ const services=[
 		</div>
 	</Section>
 	<Section height="h-fit">
-		<div class="grid grid-cols-2 w-full h-full items-center justify-center gap-5 py-50">
+		<div class="grid grid-cols-1 md:grid-cols-2 w-full h-full items-center justify-center gap-5 pb-20 md:pb-50">
 			<Image src={image1} alt="AboutImage" class="inset-shadow-[0_0px_10px] inset-shadow-accent rounded-sm"></Image>
 			<div class="flex flex-col w-full h-full justify-center">
 				<SectionTitle text="Ako to robíme u nás?" type="title" class="mb-2"></SectionTitle>
@@ -57,7 +58,7 @@ const services=[
 		</div>
 	</Section>
 	<Section height="h-fit">
-		<div class="flex flex-col justify-center items-center py-20">
+		<div class="flex flex-col justify-center items-center pb-20">
 			<SectionTitle text="Naši obchodní partneri" class="mb-20"></SectionTitle>
 			<div class="flex gap-3">
 				<div class="bg-white h-50 w-100"></div>

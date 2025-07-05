@@ -1,103 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2104.38 501.34">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2135.43 528.68">
   <defs>
     <style>
-      .cls-1 {
-        letter-spacing: -.03em;
-      }
-
-      .cls-2, .cls-3, .cls-4 {
+      .cls-1, .cls-2 {
         fill: #5f8f9e;
       }
 
-      .cls-2, .cls-5 {
+      .cls-1, .cls-3 {
         fill-rule: evenodd;
       }
 
-      .cls-6 {
-        letter-spacing: 0em;
+      .cls-4 {
+        font-family: PlusJakartaSans-Bold, 'Plus Jakarta Sans';
+        font-size: 318.27px;
+        font-variation-settings: 'wght' 700;
+        font-weight: 700;
       }
 
-      .cls-7 {
-        letter-spacing: 0em;
-      }
-
-      .cls-8 {
+      .cls-5 {
         stroke: #5f8f9e;
         stroke-miterlimit: 10;
         stroke-width: 8.48px;
       }
 
-      .cls-8, .cls-9 {
+      .cls-5, .cls-6 {
         fill: none;
       }
 
-      .cls-10 {
-        letter-spacing: 0em;
-      }
-
-      .cls-10, .cls-11 {
+      .cls-7, .cls-8, .cls-9 {
         fill: #fff;
       }
 
-      .cls-3 {
+      .cls-2 {
         stroke: #fff;
       }
 
-      .cls-3, .cls-9 {
+      .cls-2, .cls-6 {
         stroke-miterlimit: 73.41;
         stroke-width: .54px;
       }
 
-      .cls-12 {
-        letter-spacing: -.02em;
+      .cls-8 {
+        letter-spacing: 0em;
       }
 
-      .cls-4 {
-        font-family: RalewayRoman-Regular, Raleway;
-        font-size: 121.76px;
-      }
-
-      .cls-4, .cls-13 {
-        font-variation-settings: 'wght' 400;
-      }
-
-      .cls-5 {
-        fill: #868789;
-      }
-
-      .cls-13 {
-        font-family: Nunito-Regular, Nunito;
-        font-size: 263.66px;
-      }
-
-      .cls-9 {
-        stroke: #868789;
-      }
-
-      .cls-14 {
+      .cls-10 {
         fill: #94f3e4;
         letter-spacing: 0em;
       }
 
-      .cls-15 {
-        letter-spacing: -.03em;
+      .cls-3 {
+        fill: #868789;
+      }
+
+      .cls-6 {
+        stroke: #868789;
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
       }
     </style>
   </defs>
   <g>
-    <polygon class="cls-2" points="1718.5 98.56 1673.38 173.51 1665.78 156.52 1718.5 98.56 1718.5 98.56"/>
-    <path class="cls-8" d="M1503.85,126.69c3.54-13.44,8.71-26.43,15.51-38.62,13.88-24.96,34.34-45.85,59-60.55,24.59-14.77,52.8-22.74,81.52-23.26,28.8-.52,57.15,6.5,82.33,20.38,25.11,13.88,46.22,34.04,61.07,58.48,14.77,24.51,22.89,52.43,23.33,80.93.44,28.58-6.65,56.71-20.53,81.74-13.88,24.96-34.26,45.85-59,60.55-4.28,2.58-8.71,4.95-13.22,7.09"/>
-    <polygon class="cls-2" points="1659.28 18.15 1656.18 74.78 1676.04 75.89 1679.22 19.18 1659.28 18.15 1659.28 18.15"/>
-    <polygon class="cls-9" points="1659.28 18.15 1656.18 74.78 1676.04 75.89 1679.22 19.18 1659.28 18.15 1659.28 18.15"/>
-    <polygon class="cls-2" points="1804.74 212.94 1752.32 191.08 1744.79 209.32 1797.14 231.25 1804.74 212.94 1804.74 212.94"/>
-    <polygon class="cls-5" points="1749.14 45.17 1713.11 88.89 1728.25 101.59 1764.5 57.72 1749.14 45.17 1749.14 45.17"/>
-    <polygon class="cls-3" points="1749.14 45.17 1713.11 88.89 1728.25 101.59 1764.5 57.72 1749.14 45.17 1749.14 45.17"/>
-    <polygon class="cls-2" points="1748.33 288.33 1719.31 239.52 1702.4 249.56 1731.2 298.44 1748.33 288.33 1748.33 288.33"/>
-    <polygon class="cls-2" points="1804.45 119.01 1749.51 132.97 1754.38 152.31 1809.32 138.28 1804.45 119.01 1804.45 119.01"/>
-    <polygon class="cls-2" points="1567.79 51.82 1601.09 97.75 1617.19 86.15 1583.96 40.15 1567.79 51.82 1567.79 51.82"/>
-    <polygon class="cls-2" points="1518.32 127.72 1571.85 146.85 1578.5 128.09 1524.89 109.12 1518.32 127.72 1518.32 127.72"/>
+    <polygon class="cls-1" points="1730.64 138.09 1666.61 244.46 1655.81 220.36 1730.64 138.09 1730.64 138.09"/>
+    <path class="cls-5" d="M1426.01,178.02c5.03-19.07,12.37-37.52,22.01-54.81,19.7-35.42,48.73-65.08,83.73-85.93,34.9-20.96,74.93-32.28,115.69-33.01,40.87-.73,81.11,9.22,116.84,28.92,35.63,19.7,65.6,48.31,86.66,82.99,20.96,34.79,32.49,74.4,33.11,114.85.63,40.55-9.43,80.48-29.13,116-19.7,35.42-48.62,65.08-83.73,85.93-6.08,3.67-12.37,7.02-18.76,10.06"/>
+    <polygon class="cls-1" points="1646.59 23.98 1642.19 104.35 1670.38 105.92 1674.89 25.44 1646.59 23.98 1646.59 23.98"/>
+    <polygon class="cls-6" points="1646.59 23.98 1642.19 104.35 1670.38 105.92 1674.89 25.44 1646.59 23.98 1646.59 23.98"/>
+    <polygon class="cls-1" points="1853.03 300.42 1778.63 269.4 1767.94 295.28 1842.24 326.4 1853.03 300.42 1853.03 300.42"/>
+    <polygon class="cls-3" points="1774.12 62.33 1722.99 124.37 1744.47 142.39 1795.92 80.15 1774.12 62.33 1774.12 62.33"/>
+    <polygon class="cls-2" points="1774.12 62.33 1722.99 124.37 1744.47 142.39 1795.92 80.15 1774.12 62.33 1774.12 62.33"/>
+    <polygon class="cls-1" points="1772.97 407.41 1731.79 338.14 1707.79 352.39 1748.66 421.76 1772.97 407.41 1772.97 407.41"/>
+    <polygon class="cls-1" points="1852.61 167.12 1774.65 186.93 1781.56 214.38 1859.53 194.47 1852.61 167.12 1852.61 167.12"/>
+    <polygon class="cls-1" points="1516.76 71.76 1564.02 136.94 1586.86 120.49 1539.71 55.2 1516.76 71.76 1516.76 71.76"/>
+    <polygon class="cls-1" points="1446.55 179.49 1522.52 206.63 1531.95 180.01 1455.87 153.08 1446.55 179.49 1446.55 179.49"/>
   </g>
-  <text class="cls-13" transform="translate(0 363.57)"><tspan class="cls-11" x="0" y="0">Mo</tspan><tspan class="cls-10" x="372.03" y="0">st</tspan><tspan class="cls-11" x="588.5" y="0">el </tspan><tspan class="cls-14" x="874.83" y="0">A&amp;A</tspan></text>
-  <text class="cls-4" transform="translate(23.46 474.11)"><tspan x="0" y="0">Kalib</tspan><tspan class="cls-6" x="279.42" y="0">r</tspan><tspan x="321.92" y="0">ácia a op</tspan><tspan class="cls-6" x="824.03" y="0">r</tspan><tspan class="cls-12" x="866.52" y="0">a</tspan><tspan x="930.93" y="0">v</tspan><tspan class="cls-15" x="995.82" y="0">y</tspan><tspan x="1058.53" y="0" xml:space="preserve"> me</tspan><tspan class="cls-7" x="1272.93" y="0">r</tspan><tspan x="1315.43" y="0">adie</tspan><tspan class="cls-1" x="1555.52" y="0">l</tspan></text>
+  <text class="cls-4" transform="translate(0 452.29)"><tspan class="cls-7" x="0" y="0">Mos</tspan><tspan class="cls-8" x="655.32" y="0">t</tspan><tspan class="cls-9" x="785.17" y="0">el </tspan><tspan class="cls-10" x="1116.81" y="0">A&amp;A</tspan></text>
 </svg>

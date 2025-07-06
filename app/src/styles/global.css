@@ -10,7 +10,6 @@
       --color-accent: #94F2E4;
       --animate-scale-blur-in: scale-blur-in 2s ease-out forwards;
       --animate-hop: hop 3s ease-in-out forwards infinite;
-      --animate-typing: typing 1s ease-in-out;
       --animate-width: width-change 1.5s ease-out;
       @keyframes scale-blur-in {
           0% {

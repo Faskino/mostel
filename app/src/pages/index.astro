@@ -16,14 +16,14 @@ const services=[
 ---
 
 <Layout backgroundUrl="images/image.png">
-	<Hero  imagePath="/src/assets/images/mostel (1).webp" >
+	<Hero  imagePath="mostel (1).webp" mainPage="true" title="Mostel A&A" subtitle="Keď nestačí iba približne">
 		<div class="flex flex-col h-full w-full items-center justify-center text-center">
 			<SectionTitle text="Mostel A&A" ></SectionTitle>
 			<SectionTitle text="Kalibrujeme a opravujeme meradlá" type="subtitle"></SectionTitle>
 		</div>
 	</Hero>
-	<Section height="h-fit">
-		<div class="flex flex-col h-full w-full items-center justify-center text-center pt-20 pb-20 md:pt-50 md:pb-50">
+	<Section height="h-fit" >
+		<div id="more" class="flex flex-col h-full w-full items-center justify-center text-center pt-20 pb-20 md:pt-50 md:pb-50">
 			<SectionTitle text="Kalibrujeme meradlá pre rôzne veličiny" class="mb-3" ></SectionTitle>
 			<SectionTitle text="Od tlaku až po elektrický odpor" type="subtitle" class="mb-10"></SectionTitle>
 			<div class="grid grid-cols-2 md:grid-cols-4 gap-5 justify-center h-100 relative w-full mb-10 md:mb-20">
@@ -53,7 +53,7 @@ const services=[
 					cupidatat. Ad eiusmod exercitation in ex elit sint cupidatat
 					ea laboris sint quis sit.
 				</p>
-				<a href="/" class=" underline text-accent">Podrobnosti</a>
+				<a href="/about" class=" underline text-accent">Podrobnosti</a>
 			</div>
 		</div>
 	</Section>

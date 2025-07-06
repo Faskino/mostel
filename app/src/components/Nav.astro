@@ -11,7 +11,7 @@ const items = [
 <nav>
   <div
     id="navbar"
-    class="fixed text-white top-0 left-0 w-screen h-16 flex items-center justify-between px-10 md:px-20 lg:px-32 xl:px-64 z-[1000] transition-colors duration-150 backdrop-blur-xs bg-background/50"
+    class="shadow-md fixed text-white top-0 left-0 w-screen h-16 flex items-center justify-between px-10 md:px-20 lg:px-32 xl:px-64 z-[1000] transition-colors duration-150 backdrop-blur-xs bg-background/50"
   >
     <a class="w-30" href="/"><img src="/logo-mostel.svg" alt="" /></a>
 
@@ -81,26 +81,3 @@ const items = [
     </div>
   </div>
 </nav>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const navbar = document.getElementById("navbar");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
-        navbar?.classList.add("shadow-md");
-      } else {
-        navbar?.classList.remove("shadow-md");
-      }
-    });
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("mobile-menu");
-    const close = document.getElementById("close-toggle");
-
-    toggle?.addEventListener("click", () => {
-      menu?.classList.toggle("hidden");
-    });
-    close?.addEventListener("click", ()=>{
-      menu?.classList.toggle("hidden");
-    })
-  });
-</script>

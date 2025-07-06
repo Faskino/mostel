@@ -19,9 +19,9 @@ const {backgroundUrl} = Astro.props
 		<slot />
 	</body>
 </html>
-<style define:vars={{image: `url(${backgroundUrl})`, image2:`url(sm-${backgroundUrl})`}}>
+<style define:vars={{image1: `url(/images/${backgroundUrl})`, image2: `url(/sm-images/${backgroundUrl})`}}>
 	.bg{
-		background-image: var(--image);
+		background-image: var(--image1);
 		@media (max-width: 600px){
 			background-image: var(--image2);
 		}

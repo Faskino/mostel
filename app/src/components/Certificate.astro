@@ -1,16 +1,19 @@
 ---
  const images = [
-    {src:'certificates/certificate1.jpg', title:"Hmotnosť"},
-    {src:'certificates/certificate2.jpg', title:"Tlak"},
-    {src:'certificates/certificate3.jpg', title:"Teplota"},
-    {src:'certificates/certificate4.jpg', title:"Dĺžka"},
-    {src:'certificates/certificate5.jpg', title:"Elektro"}
+    {src:'certificates/hmotnost.png', title:"Hmotnosť"},
+    {src:'certificates/tlak.png', title:"Tlak"},
+    {src:'certificates/teplota.png', title:"Teplota"},
+    {src:'certificates/dlzka.png', title:"Dĺžka"},
+    {src:'certificates/elektro.png', title:"Elektro"},
+    {src:'certificates/metrologia.png', title:"Metrológia"},
+    {src:'certificates/osvedcenie23.png', title:"Osvedčenie"},
+    {src:'certificates/zivnost.png', title:"Živnosť"}
  ]
 ---
-<div class="grid grid-cols-2 md:grid-cols-5 gap-5 w-full h-full">
+<div class="flex flex-wrap w-full h-full gap-2 md:gap-5 justify-center">
 {images.map(image =>(
-<div id="certificate" style={{backgroundImage: `url('${image.src}')`}} class="bg-cover h-50 w-full cursor-pointer flex group md:last:col-span-1 last:col-span-2 rounded-sm overflow-hidden" onclick={`showFullscreen('${image.src}')`}>
-    <p class="self-end bg-accent text-primary w-full text-center p-4 transition-all duration-150 group-hover:p-6 select-none">{image.title}</p>
+<div id="certificate" style={{backgroundImage: `url('${image.src}')`}} class="bg-cover h-40 w-40 md:h-50 md:w-50  cursor-pointer flex group md:last:col-span-1 last:col-span-2 rounded-sm overflow-hidden" onclick={`showFullscreen('${image.src}')`}>
+    <p class="self-end bg-accent text-primary font-bold w-full text-center p-4 transition-all duration-150 group-hover:p-6 select-none">{image.title}</p>
 </div>
 ))}
 </div>

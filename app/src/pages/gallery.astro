@@ -14,8 +14,7 @@ const images = Object.values(assets).map((mod: any) => mod.default);
 ---
 
 <Layout backgroundUrl="image.png">
-  <Section height="h-fit">
-    <div>
+  <Section height="h-fit pb-20" >
       <Masonry>
         {
           images.map((image, index) => (
@@ -33,7 +32,7 @@ const images = Object.values(assets).map((mod: any) => mod.default);
         id="fullscreenOverlay"
         class="fixed left-0 right-0 top-0 z-1001 w-screen h-screen hidden items-center justify-center bg-black/40 backdrop-blur-sm"
       >
-        <div class="">
+        <div>
           <img
             id="fullscreenImage"
             src=""
@@ -139,6 +138,5 @@ const images = Object.values(assets).map((mod: any) => mod.default);
           });
         });
       </script>
-    </div>
   </Section>
 </Layout>

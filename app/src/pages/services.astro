@@ -4,6 +4,25 @@ import SectionTitle from "../components/SectionTitle.astro"
 import Section from "../components/Section.astro"
 import Button from "../components/Button.astro";
 const items = [
+  { link:"/images/mostel (75).webp", text:"Elektro", content: `
+  <li>kalibrácia multimetrov</li>
+  <li>kalibrácia rúčkových meradiel</li>
+  <li>kalibrácia ohmetrov</li>
+  <li>kalibrácia meradiel kapacity</li>
+  <li>kalibrácia meradiel indukčnosti</li>
+  <li>kalibrácia RLC mostov</li>
+  <li>kalibrácia osciloskopov</li>
+  <li>kalibrácia generátorov</li>
+  <li>kalibrácia čítačov</li>
+  <li>kalibrácia revíznych prístrojov</li>
+  <li>kalibrácia AC a DC zdrojov</li>
+  <li>kalibrácia odporových dekád</li>
+  <li>kalibrácia kapacitných dekád</li>
+  <li>kalibrácia bočníkov</li>
+  <li>kalibrácia záťaží</li>
+  <li>kalibrácia testerov batérií</li>
+
+` },
   { link:"/images/mostel (56).webp", text:"Dĺžka, uhol a tvrdosť",  content: `
   
   <li>kalibrácia posuvných meradiel všetkých druhov</li>
@@ -28,17 +47,7 @@ const items = [
 
 
 ` },
-  {link:"/images/mostel (84).webp", text:"Moment sily, váha a tlak",  content: `
-  <li>kalibrácia momentových kľúčov</li>
-  <li>kalibrácia momentových skrutkovačov</li>
-  <li>kalibrácia elektrických momentových kľúčov</li>
-  <li>kalibrácia testerov momentových kľúčov</li>
-  <li>kalibrácia dynamometrov</li>
-  <li>kalibrácia silomerov</li>
-  <li>kalibrácia váh</li>
-  <li>kalibrácia tlakomerov</li>
-` },
-  { link:"/images/mostel (111).webp", text:"Teplota, vlhkosť",  content: `<li>kalibrácia teplomerov obalových</li>
+{ link:"/images/mostel (111).webp", text:"Teplota, vlhkosť",  content: `<li>kalibrácia teplomerov obalových</li>
   <li>kalibrácia teplomerov bimetalických</li>
   <li>kalibrácia teplomerov vpichových</li>
   <li>kalibrácia teplomerov chladničkových</li>
@@ -54,25 +63,18 @@ const items = [
   <li>kalibrácia vlhkomerov</li>
   <li>kalibrácia meradiel vlhkosti materiálov</li>
 ` },
-  { link:"/images/mostel (75).webp", text:"Elektro", content: `
-  <li>kalibrácia multimetrov</li>
-  <li>kalibrácia rúčkových meradiel</li>
-  <li>kalibrácia ohmetrov</li>
-  <li>kalibrácia meradiel kapacity</li>
-  <li>kalibrácia meradiel indukčnosti</li>
-  <li>kalibrácia RLC mostov</li>
-  <li>kalibrácia osciloskopov</li>
-  <li>kalibrácia generátorov</li>
-  <li>kalibrácia čítačov</li>
-  <li>kalibrácia revíznych prístrojov</li>
-  <li>kalibrácia AC a DC zdrojov</li>
-  <li>kalibrácia odporových dekád</li>
-  <li>kalibrácia kapacitných dekád</li>
-  <li>kalibrácia bočníkov</li>
-  <li>kalibrácia záťaží</li>
-  <li>kalibrácia testerov batérií</li>
-
+  {link:"/images/mostel (84).webp", text:"Moment sily, váha a tlak",  content: `
+  <li>kalibrácia momentových kľúčov</li>
+  <li>kalibrácia momentových skrutkovačov</li>
+  <li>kalibrácia elektrických momentových kľúčov</li>
+  <li>kalibrácia testerov momentových kľúčov</li>
+  <li>kalibrácia dynamometrov</li>
+  <li>kalibrácia silomerov</li>
+  <li>kalibrácia váh</li>
+  <li>kalibrácia tlakomerov</li>
 ` },
+  
+  
 ];
 ---
 
@@ -94,17 +96,18 @@ const items = [
                   <svg  class="h-15 w-15 stroke-accent rotate-12 absolute bottom-5 right-5 opacity-40 "  id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" ><defs><style>.cls-63763c42c3a86d32eae6f14e-1{fill:none;}</style></defs><polyline class="cls-63763c42c3a86d32eae6f14e-1" points="7.23 8.18 1.5 8.18 1.5 16.77 7.23 16.77 11.04 16.77 14.86 16.77 18.68 16.77 22.5 16.77 22.5 8.18 16.77 8.18"></polyline><rect class="cls-63763c42c3a86d32eae6f14e-1" x="7.23" y="6.27" width="9.55" height="3.82" rx="1.91"></rect><circle class="cls-63763c42c3a86d32eae6f14e-1" cx="4.84" cy="12.48" r="0.48"></circle><line class="cls-63763c42c3a86d32eae6f14e-1" x1="7.23" y1="14.86" x2="7.23" y2="16.77"></line><line class="cls-63763c42c3a86d32eae6f14e-1" x1="14.86" y1="14.86" x2="14.86" y2="16.77"></line><line class="cls-63763c42c3a86d32eae6f14e-1" x1="11.05" y1="13.91" x2="11.05" y2="17.73"></line><line class="cls-63763c42c3a86d32eae6f14e-1" x1="18.68" y1="13.91" x2="18.68" y2="17.73"></line></svg>
                   
                     <ul id="displayArea" class="list-disc">
-                      Informácie sa zobrazia po kliknutí.
+                      Informácie sa zobrazia po kliknutí na možnosť.
                     </ul>
                 </div>
               </div>
+              <p>Cenník alebo cenovú ponuku vypracujeme obratom na požiadanie.</p>
               <Button href="/contact" text="Kontaktujte nás"></Button>   
         </div>
     </Section>
     <Section height="h-fit">
       <SectionTitle text="Opravy meradiel" class="mb-10"></SectionTitle>
       <div class="mb-30">
-        <p>Na požiadavku vieme zariadiť aj opravu meradiel</p>
+        <p>Opravu meradla vykonávame dohodou po obhliadke jeho stavu a za predpokladu možnosti zabezpečenia náhradných dielov. Samostatná obhliadka meradla je bezplatná. V prípade že vieme vykonať opravu, vypracujeme cenovú ponuku a až po jej odsuhlásení meradlo opravíme. V prípade akýchkoľvek otázok nás neváhajte <a href="/contact" class="text-accent">kontaktovať.</a></p>
       </div>
     </Section>
 

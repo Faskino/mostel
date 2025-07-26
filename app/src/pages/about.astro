@@ -2,45 +2,76 @@
 import Section from "../components/Section.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import Layout from "../layouts/Layout.astro";
-import Gallery from "../components/Gallery.astro"
+import Gallery from "../components/Gallery.astro";
 import Button from "../components/Button.astro";
 import Hero from "../components/Hero.astro";
 import Certificate from "../components/Certificate.astro";
 ---
 
 <Layout backgroundUrl="image2.png">
-    <Hero imagePath="mostel (125).webp" title="Sme experti na kalibráciu" subtitle="Ponúkame presné merania bez starostí">
-    </Hero>
+    <Hero
+        imagePath="mostel (125).webp"
+        title="Sme experti na kalibráciu"
+        subtitle="Ponúkame presné merania bez starostí"
+    />
     <Section height="h-fit">
-		<div class="flex flex-col h-full w-full items-center justify-center text-center pt-20 pb-20 md:pt-50 md:pb-50">
-			<SectionTitle text="O našej firme" class="mb-3"></SectionTitle>
-			<SectionTitle text="Zabezpečujeme spoľahlivosť a kvalitu vašich meracích prístrojov" type="subtitle" class="mb-10"></SectionTitle>
-			<div class="flex h-100 w-full mb-5">
-				<div style="background-image: url('/images/mostel (120).webp');" class="bg-cover bg-no-repeat bg-center w-full h-full"></div>
-			</div>
-            <p class="text-white text-center">
-					Ex nisi occaecat nulla fugiat est nisi amet eiusmod
-					voluptate. Exercitation ullamco veniam sint commodo nisi
-					adipisicing pariatur do non exercitation fugiat velit
-					deserunt exercitation. Sint voluptate aliqua consequat
-					deserunt proident consectetur. Veniam veniam velit aliquip
-					cupidatat. Ad eiusmod exercitation in ex elit sint cupidatat
-					ea laboris sint quis sit.
-				</p>
-		</div>
-	</Section>
-    <Section height="h-fit">
-        <div class="flex flex-col w-full  text-center items-center pb-20 md:pb-50">
-            <SectionTitle text="Pozrite sa na naše vybavenie" class="mb-5"></SectionTitle>
-            <Gallery></Gallery>
-            <Button text="Galéria" href="gallery"></Button>
-        </div >
+        <div
+            class="flex flex-col h-full w-full items-center justify-center text-center pt-20 pb-20 md:pt-50 md:pb-50"
+        >
+            <SectionTitle text="O našej firme" class="mb-3" />
+            <SectionTitle
+                text="Zabezpečujeme spoľahlivosť a kvalitu vašich meracích prístrojov"
+                type="subtitle"
+                class="mb-10"
+            />
+            <div class="flex h-100 w-full mb-5">
+                <div
+                    style="background-image: url('/images/mostel (3).webp');"
+                    class="bg-cover bg-no-repeat bg-center w-full h-full"
+                >
+                </div>
+            </div>
+            <ul class="text-white text-left px-0 md:px-20 gap-2 flex flex-col list-disc">
+                <li class="indent-7">
+                    Firma MOSTEL A&A bola založená 13.4.2007. Zaoberáme sa
+                    kalibráciou a opravami pracovných meradiel dĺžky
+                    (geometrické veličiny), elektrických veličín, momentu sily,
+                    váhy, tlaku, teploty a iných.
+                </li>
+                <li class="indent-7">
+                    Kalibráciu meradiel vykonávame v zmysle Zákona č. 157/2018
+                    Z. z. o metrológii v znení zákona č. 431/2004 Z. z. Úplne
+                    znenie s výkladom.
+                </li>
+                <li class="indent-7">
+                    Meradlo skalibrujeme, označíme kalibračným štítkom s
+                    vyznačeným dátumom kalibrácie a vystavíme kalibračný
+                    certifikát. Kalibračný certifikát je zahrnutý v cene
+                    kalibrácie.
+                </li>
+            </ul>
+        </div>
     </Section>
     <Section height="h-fit">
-        <div class="flex flex-col w-full text-center items-center justify-center pb-20">
-            <SectionTitle text="Certifikáty" class="mb-2"></SectionTitle>
-            <SectionTitle text="Naše certifikáty sú dôkazom našej kvality a presnosti" type="subtitle" class="mb-5"></SectionTitle>
-            <Certificate/>
+        <div
+            class="flex flex-col w-full text-center items-center pb-20 md:pb-50"
+        >
+            <SectionTitle text="Pozrite sa na naše vybavenie" class="mb-5" />
+            <Gallery />
+            <Button text="Galéria" href="gallery" />
+        </div>
+    </Section>
+    <Section height="h-fit">
+        <div
+            class="flex flex-col w-full text-center items-center justify-center pb-20"
+        >
+            <SectionTitle text="Certifikáty" class="mb-2" />
+            <SectionTitle
+                text="Naše certifikáty sú dôkazom našej kvality a presnosti"
+                type="subtitle"
+                class="mb-5"
+            />
+            <Certificate />
         </div>
     </Section>
 </Layout>

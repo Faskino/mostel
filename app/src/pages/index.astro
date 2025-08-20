@@ -6,13 +6,9 @@ import SectionTitle from "../components/SectionTitle.astro";
 import Hero from "../components/Hero.astro";
 import Button from "../components/Button.astro";
 import Image from "astro/components/Image.astro";
-import image1 from '../assets/images/mostel (129).webp';
-const services=[
-	{link:"/images/mostel (75).webp", text:"Elektro"},	
-	{link:"/images/mostel (56).webp", text:"Dĺžka, uhol a tvrdosť"},
-	{link:"/images/mostel (111).webp", text:"Teplota, vlhkosť"},
-	{link:"/images/mostel (84).webp", text:"Moment sily, váha a tlak"},
-]
+import image1 from '../assets/images/mostel (2).webp';
+import ServicesGrid from "../components/ServicesGrid.astro";
+
 ---
 
 <Layout backgroundUrl="image.png">
@@ -22,16 +18,8 @@ const services=[
 		<div id="more" class="flex flex-col h-full w-full items-center justify-center text-center pt-20 pb-20 md:pt-50 md:pb-50">
 			<SectionTitle text="Kalibrujeme meradlá pre rôzne veličiny" class="mb-3" ></SectionTitle>
 			<SectionTitle text="Od tlaku až po elektrický odpor" type="subtitle" class="mb-10"></SectionTitle>
-			<div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-5 justify-center h-100 relative w-full mb-10 md:mb-20">
-				{services.map(item=>(
-					<a href="/services" class="flex flex-col hover:scale-98 duration-100 h-full">
-						<div style=`background-image: url("${item.link}")` class=" h-40 md:h-full w-full bg-center bg-cover rounded-sm"></div>
-						<p class="text-sm md:text-base">{item.text}</p>
-					</a>
-					
-				))}
-			</div>
-			<Button href="/services" text="Detaily"></Button>
+			<ServicesGrid></ServicesGrid>
+			<Button href="/services" text="Viac"></Button>
 		</div>
 	</Section>
 	<Section height="h-fit">

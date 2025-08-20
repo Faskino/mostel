@@ -1,0 +1,131 @@
+[
+  {
+    "id": 1,
+    "link": "/images/mostel (20).webp",
+    "text": "Elektro",
+    "content": [
+      "kalibrácia multimetrov",
+      "kalibrácia rúčkových meradiel",
+      "kalibrácia ohmetrov",
+      "kalibrácia meradiel kapacity",
+      "kalibrácia meradiel indukčnosti",
+      "kalibrácia RLC mostov",
+      "kalibrácia osciloskopov",
+      "kalibrácia generátorov",
+      "kalibrácia čítačov",
+      "kalibrácia revíznych prístrojov",
+      "kalibrácia AC a DC zdrojov",
+      "kalibrácia odporových dekád",
+      "kalibrácia kapacitných dekád",
+      "kalibrácia bočníkov",
+      "kalibrácia záťaží",
+      "kalibrácia testerov batérií"
+    ]
+  },
+  {
+    "id": 2,
+    "link": "/images/mostel (56).webp",
+    "text": "Dĺžka",
+    "content": [
+      "kalibrácia posuvných meradiel všetkých druhov",
+      "kalibrácia dvojdotykových a trojdotykových dutinomerov",
+      "kalibrácia mikrometrov všetkých druhov",
+      "kalibrácia mikrometrických odpichov pevných a skladacích",
+      "kalibrácia valčekových a strmeňových kalibrov, kontrolných krúžkov a kontrolných mierok k strmeňovým mikrometrom",
+      "kalibrácia závitových kalibrov pre vonkajší a vnútorný závit",
+      "kalibrácia passametrov a mikropassametrov",
+      "kalibrácia meracích drôtikov na kontrolu závitov",
+      "kalibrácia kontrolných valčekov a lístkových škáromerov",
+      "kalibrácia pevných oceľových čiarkových meradiel, oceľových stáčacích metrov a pásiem",
+      "kalibrácia koncových mierok",
+      "kalibrácia nožových pravítiek"
+    ]
+  },
+  {
+    "id": 3,
+    "link": "/images/mostel (56).webp",
+    "text": "Uhol",
+    "content": [
+      "kalibrácia mechanických a optických uhlomerov",
+      "kalibrácia uholníkov",
+      "kalibrácia uhlomerov"
+    ]
+  },
+  {
+    "id": 4,
+    "link": "/images/mostel (106).webp",
+    "text": "Tvrdosť",
+    "content": [
+      "kalibrácia číselníkových odchýlkomerov všetkých druhov",
+      "kalibrácia závitových a polomerových šablón",
+      "kalibrácia tvrdomerov"
+    ]
+  },
+  {
+    "id": 5,
+    "link": "/images/mostel (111).webp",
+    "text": "Teplota",
+    "content": [
+      "kalibrácia teplomerov obalových",
+      "kalibrácia teplomerov bimetalických",
+      "kalibrácia teplomerov vpichových",
+      "kalibrácia teplomerov chladničkových",
+      "kalibrácia teplomerov mrazničkových",
+      "kalibrácia teplomerov hrotu spájkovačky",
+      "kalibrácia spájkovačiek",
+      "kalibrácia nastenných teplomerov",
+      "kalibrácia predohrevov",
+      "kalibrácia sušiacich pecí",
+      "kalibrácia teplotných čidiel",
+      "kalibrácia datalogerov teploty"
+    ]
+  },
+  {
+    "id": 6,
+    "link": "/images/mostel (89).webp",
+    "text": "Vlhkosť",
+    "content": [
+      "kalibrácia datalogerov vlhkosti",
+      "kalibrácia vlhkomerov",
+      "kalibrácia meradiel vlhkosti materiálov"
+    ]
+  },
+  {
+    "id": 7,
+    "link": "/images/mostel (47).webp",
+    "text": "Moment sily",
+    "content": [
+      "kalibrácia momentových kľúčov",
+      "kalibrácia momentových skrutkovačov",
+      "kalibrácia elektrických momentových kľúčov",
+      "kalibrácia testerov momentových kľúčov"
+    ]
+  },
+  {
+    "id": 8,
+    "link": "/images/mostel (84).webp",
+    "text": "Váha",
+    "content": [
+      "kalibrácia dynamometrov",
+      "kalibrácia silomerov",
+      "kalibrácia váh"
+    ]
+  },
+  {
+    "id": 9,
+    "link": "/images/mostel (75).webp",
+    "text": "Tlak",
+    "content": [
+      "kalibrácia tlakomerov"
+    ]
+  },
+  {
+    "id": 10,
+    "link": "/images/mostel (91).webp",
+    "text": "Ostatné",
+    "content": [
+        "kalibrácia alkoholtesterov"
+    ]
+  }
+  
+]

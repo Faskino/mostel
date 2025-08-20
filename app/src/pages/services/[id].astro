@@ -1,0 +1,48 @@
+---
+import Section from "../../components/Section.astro";
+import SectionTitle from "../../components/SectionTitle.astro";
+import data from "../../data/services.json";
+import Layout from "../../layouts/Layout.astro";
+
+// Generate dynamic paths for each category
+export async function getStaticPaths() {
+    return data.map((item: any) => ({
+        params: { id: String(item.id) },
+        props: { item },
+    }));
+}
+
+const { item } = Astro.props;
+---
+
+<Layout>
+    <div class="h-20"></div>
+    <Section>
+        <SectionTitle text={item.text} />
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 mt-10">
+            <div class="col-span-1 flex flex-col items-center justify-center w-full h-full max-h-150">
+                <img src={item.link} alt={item.text} class="rounded-sm w-full h-full object-cover " />
+            </div>
+            <div
+                class="flex-1 text-sm md:text-base p-6 bg-primary/50 rounded-sm text-left overflow-y-auto relative "
+            >
+                <ul class="list-disc">
+                    {item.content.map((service: any) => <li class="first-letter:uppercase">{service}</li>)}
+                </ul>
+            </div>
+        </div>
+
+        <nav class="flex flex-col items-center mb-20">
+            <h3 class="text-2xl font-bold mb-3">Ďalšie kategórie</h3>
+            <ul class="flex flex-wrap gap-5 bg-accent py-3 px-6 rounded-sm md:rounded-full justify-center">
+                {
+                    data.map((cat) => (
+                        <li class="underline">
+                            <a href={`/services/${cat.id}`} class="text-primary">{cat.text}</a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </nav>
+    </Section>
+</Layout>
